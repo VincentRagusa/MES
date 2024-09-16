@@ -1,11 +1,27 @@
+from parameters import Parameters
+
+#commandLine Parameters
+# -s <path> save config file
+# -c <path> load config file
+
+
+PT = Parameters()
+if loadConfigFile:
+    PT.readConfigFile(pathToConfig)
+if saveConfigFile:
+    PT.writeConfigFile(pathToConfig)
+    exit()
+
+
+# imports after config finished
+from population import Population
 
 
 
 
 
-parameters = {}
-parameters["Generations"] = 10
 
+thisPopulation = Population(parameters["PopSize"])
 
 # INIT POPULATION(S)
 #   INIT ORGANISMS
